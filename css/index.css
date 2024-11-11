@@ -1,0 +1,494 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.manrope-extralight {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.manrope-light {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+ 
+.manrope-regular {
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.manrope-medium {
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.manrope-semibold {
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+  }
+
+.manrope-bold {
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.manrope-extrabold {
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+
+#logo-text {
+    z-index: 5;
+    position: fixed;
+    top: 32%;
+    left: 0;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 150px;
+}
+
+#logo {
+    width: 44px;
+    height: 44px;
+}
+
+#navigation-list {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+#navigation-list li{
+    list-style: none;
+}
+
+#navigation-list li a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.right-side-of-header{
+    display: flex;
+    gap: 30px;
+}
+
+.language-button{
+    background-color: #000000;
+    border: 0;
+    display: flex;
+    color: #ffffff;
+    align-items: center;
+    gap: 15px;
+    font-size: 12px;
+}
+
+.language-button div{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.languages {
+    display: block;
+    position: absolute;
+    top: 80%;
+    left: 0;
+    font-size: 12px;
+    background-color: #ffffff;
+    color: #000000;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.languages-area{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+main {
+    margin-top: 180px;
+}
+
+.area-1 {
+    margin-left: 150px;
+    margin-right: 120px;
+    margin-bottom: 69px;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.area-1 h2{
+    font-size: 72px;
+    max-width: 40%;
+    line-height: 80px;
+}
+
+.area-1 div{
+    display: flex;
+    gap: 60px;
+}
+
+.primary-button {
+    background-color: #3549CB;
+    padding: 18px 25px;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.secondary-button{
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid #ffffff;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    padding: 17px 23px;
+    font-size: 16px;
+}
+
+.arrow-button{
+    display: flex;
+    gap: 20px;
+    padding-right: 62px;
+    background-image: url(../resources/images/arrow-long.svg);
+    background-position: right 15px center;
+    background-repeat: no-repeat;
+}
+
+.companies-list{
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  column-gap: 128px;
+  justify-items: center; 
+  align-items: center; 
+  justify-content: center; 
+  row-gap: 16px;
+}
+
+.area-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px; 
+    padding: 240px 0 80px;
+}
+
+.company-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+.woman-area-content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 33px;
+}
+
+.area-4 {
+    display: flex;
+}
+
+.woman-area {
+    width: 50%;
+    background: url(../resources/images/smily-woman-backgound.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vw;
+    padding: 70px;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+}
+
+.notebook-area {
+    width: 50%;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.76) 0%, rgba(255, 255, 255, 0) 100%), url(../resources/images/notebook-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vw;
+    padding: 70px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+}
+
+.woman-area p {
+    font-size: 36px;
+    width: 60%;
+}
+
+.notebook-area p {
+    font-size: 36px;
+    width: 60%;
+}
+
+.careers-button {
+    position: relative;
+    right: 0%;
+    top: 35%;
+}
+
+footer {
+    padding: 100px;
+    padding-top: 120px;
+    display: flex;
+    flex-direction: column;
+    background-image: url(../resources/images/hand-1.png), url(../resources/images/hand-3.png);
+    background-repeat: no-repeat;
+    background-position: right 21% bottom 30%, right 10% bottom 100%;
+}
+
+footer h2{
+    font-size: 40px;
+    width: 25%;
+    line-height: 45px;
+}
+
+.button-footer-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.links-footer-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.license {
+    font-size: 14px;
+    color: #858A99;
+}
+
+.button-area {
+    display: flex;
+    gap: 20px;
+}
+
+footer ul {
+    display: flex;
+    gap: 10px;
+}
+
+footer ul li {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+footer ul li img {
+    object-fit: contain;
+}
+
+footer ul li span {
+    font-size: 16px;
+}
+
+.video-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes right-hand-vacillation {
+    0%, 100% { transform: rotate(0) translate(0, 0); }
+    25% { transform: rotate(5deg) translate(2px, 2px); }
+    50% { transform: rotate(0) translate(0, -2px); }
+    75% { transform: rotate(-5deg) translate(-2px, 2px); }
+}
+
+@keyframes left-hand-vacillation {
+    0%, 100% { transform: rotate(0) translate(0, 0); }
+    25% { transform: rotate(-5deg) translate(-2px, 2px); }
+    50% { transform: rotate(0) translate(0, -2px); }
+    75% { transform: rotate(5deg) translate(2px, 2px); }
+}
+
+.video-hand-1.in-view {
+    animation: right-hand-vacillation 10s linear infinite;
+    will-change: transform;
+}
+
+.video-hand-2.in-view {
+    animation: left-hand-vacillation 10s linear infinite;
+    will-change: transform;
+}
+
+.video-hand-1 {
+    position: absolute;
+    left: -20px;
+    top: 0;
+    z-index: 4;
+}
+
+.video-hand-2 {
+    position: absolute;
+    right: -40px;
+    bottom: 0;
+    z-index: 4;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 55%;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transform: rotate(-5deg);
+}
+.buttons {
+    position: absolute;
+}
+
+.buttons button {
+    background: none;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+.buttons button::before {
+    content: '';
+    background-image: url(../resources/images/play-button.png);
+    background-size: cover;
+    background-position: center;
+    z-index: 5;
+    width: 100px;
+    height: 100px;
+    display: block;
+}
+
+.buttons button.play::before {
+    background-image: url(../resources/images/play-button.png);
+}
+
+.buttons button.pause::before {
+    background-image: url(../resources/images/pause-button.png);
+}
