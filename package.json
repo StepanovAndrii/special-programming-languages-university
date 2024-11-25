@@ -1,0 +1,15 @@
+{
+  "name": "special-programming-languages-university",
+  "version": "1.0.0",
+  "description": "Created for the \"Special programming languages\" course, 4th year, 1st semester. It is planned to create a full-fledged application using the **typescript programming language.**\r <br />\r <br />\r Each task and its execution will be recorded in **README.md** files. A link to the completed task (if possible) will be placed **bellow**.\r <br />\r <br />",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.7.2"
+  }
+}
